@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27130.2027
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoPlayer", "VideoPlayer\VideoPlayer.csproj", "{584DB4F1-B128-4CB6-837C-FDF81BAD47D1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Configuration", "Configuration\Configuration.csproj", "{76A2B259-C6FA-48AE-9160-00D9E04CD70C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{584DB4F1-B128-4CB6-837C-FDF81BAD47D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{584DB4F1-B128-4CB6-837C-FDF81BAD47D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{584DB4F1-B128-4CB6-837C-FDF81BAD47D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76A2B259-C6FA-48AE-9160-00D9E04CD70C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76A2B259-C6FA-48AE-9160-00D9E04CD70C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76A2B259-C6FA-48AE-9160-00D9E04CD70C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76A2B259-C6FA-48AE-9160-00D9E04CD70C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
