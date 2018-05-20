@@ -6,7 +6,18 @@
         xmlns:local="clr-namespace:VideoPlayer"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
+    <Grid Margin="0,0,-1996.333,-1893.333">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1345*"/>
+            <ColumnDefinition Width="1004*"/>
+            <ColumnDefinition Width="166*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0*"/>
+            <RowDefinition Height="541*"/>
+            <RowDefinition Height="566*"/>
+        </Grid.RowDefinitions>
+        <Canvas HorizontalAlignment="Left" Height="100" Margin="-3792,814,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="100"/>
+
     </Grid>
 </Window>
