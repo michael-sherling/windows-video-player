@@ -12,7 +12,15 @@ namespace VideoPlayer
         public int MainWindowHeight { get; set; }
         public bool ShowControls { get; set; }
 
+        public VideoLibraryItem[] VideoLibraryItems { get; set; }
+
         public ScreenConfiguration[] Screens { get; set; }
+    }
+
+    public class VideoLibraryItem
+    {
+        public string Name { get; set; }
+        public string FullFilePath { get; set; }
     }
 
     public class ScreenConfiguration
@@ -22,8 +30,7 @@ namespace VideoPlayer
         public int Width { get; set; }
         public int Height { get; set; }
         public string ID { get; set; }
-        public string VideoFilePath { get; set; }
+        public string LibraryItemName { get; set; }
         public bool PlaySound { get; set; }
-
     }
 }

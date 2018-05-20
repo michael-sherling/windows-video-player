@@ -28,6 +28,8 @@ namespace VideoPlayer
 
             var screensConfiguration = Settings.Default.ScreensConfiguration;
 
+            var library = screensConfiguration.VideoLibraryItems.ToList().ToDictionary(i => i.Name, i => i.FullFilePath);
+            
             Top = screensConfiguration.MainWindowTop;
             Left = screensConfiguration.MainWindowLeft;
             Width = screensConfiguration.MainWindowWidth;
@@ -35,7 +37,7 @@ namespace VideoPlayer
 
             foreach (var screen in screensConfiguration.Screens)
             {
-                var videoWindow = new VideoWindow(screen, screensConfiguration.ShowControls);
+                var videoWindow = new VideoWindow(screen, library, screensConfiguration.ShowControls);
 
                 Canvas.SetTop(videoWindow, screen.Top);
                 Canvas.SetLeft(videoWindow, screen.Left);

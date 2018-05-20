@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:VideoPlayer"
         mc:Ignorable="d"
         Title="MainWindow"
-        WindowStyle="None">
+        WindowStyle="None"
+        Background="Black">
     <Canvas Top="0" Name="MainCanvas">
     </Canvas>
 </Window>

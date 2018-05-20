@@ -21,10 +21,17 @@ namespace VideoPlayer
     /// </summary>
     public partial class VideoWindow : UserControl
     {
-        private string _filePath;
-        public VideoWindow(ScreenConfiguration screenConfiguration, bool showControls)
+        private Dictionary<string, string> _videoLibrary;
+
+        public VideoWindow(
+            ScreenConfiguration screenConfiguration,
+            Dictionary<string, string> videoLibrary,
+            bool showControls)
         {
+            _videoLibrary = videoLibrary;
+
             InitializeComponent();
+
             Width = screenConfiguration.Width;
             Height = screenConfiguration.Height;
             Video.Width = screenConfiguration.Width;
@@ -36,8 +43,8 @@ namespace VideoPlayer
                 Controls.Visibility = Visibility.Hidden;
             }
 
-            FilePath.Text = screenConfiguration.VideoFilePath;
-            Video.Source = new Uri(FilePath.Text);
+            FilePath.Text = screenConfiguration.LibraryItemName;
+            Video.Source = new Uri(_videoLibrary[FilePath.Text]);
             Video.IsMuted = !screenConfiguration.PlaySound;
         }
 
@@ -55,7 +62,7 @@ namespace VideoPlayer
 
         private void LoadButton_OnClick(object sender, RoutedEventArgs e)
         {
-            Video.Source = new Uri(_filePath = FilePath.Text);
+            Video.Source = new Uri(_videoLibrary[FilePath.Text]);
         }
 
     }
